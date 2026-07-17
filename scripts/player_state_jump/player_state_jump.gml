@@ -44,26 +44,26 @@ function player_state_jump(){
 	}
 	
 	//If global value for dropdash is diabled don't execute
-	if(global.use_dropdash) {
+	//if(global.use_dropdash) {
 	
 		//Add dropdash timer
-		if(character == CHAR_SONIC)
-		{
-			if(press_action && dropdash_timer < 1 && y_speed > -jump_release ||
-			hold_action && dropdash_timer != 0)
-			{
-				dropdash_timer++;
-			}
-		}
+		//if(character == CHAR_SONIC)
+		//{
+			//if(press_action && dropdash_timer < 1 && y_speed > -jump_release ||
+			//hold_action && dropdash_timer != 0)
+			//{
+				//dropdash_timer++;
+			//}
+		//}
 		//Trigger the dropdash state
-		if(dropdash_timer >= 8 && state != player_state_dropdash)
-		{
-			play_sound(sfx_dropdash);
-			state = player_state_dropdash;
-			exit;
-		}
+		//if(dropdash_timer >= 8 && state != player_state_dropdash)
+		//{
+			//play_sound(sfx_dropdash);
+			//state = player_state_dropdash;
+			//exit;
+		//}
 	
-	}
+	//}
 	
 	//Trigger fly
 	if(press_action && character == CHAR_TAILS && y_speed > -jump_release)
